@@ -6,6 +6,10 @@ var popover_closed = true;
 
 $(function() {
 
+  document.ontouchmove = function(event){
+      event.preventDefault();
+  }
+
   var $app_icon = $('.app_icon');
   var $app_icons = $('.app_icons');
 
