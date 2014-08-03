@@ -11,6 +11,7 @@ $(function() {
   $app_icon.on("touchstart", function(){
     $(this).addClass('grow');
     $(this).removeClass('shrink');
+    $('.popovers').removeClass('bounce');
   });
 
   $app_icon.on("touchend", function(){
@@ -25,9 +26,7 @@ $(function() {
 
     elementSpringTo("#caret", icon_index*95 + 45, 150, [50, 10, 2]);
     $('.popovers').addClass('bounce');
-    setTimeout(function(){
-       $('.popovers').removeClass('bounce');
-     }, 550);
+  
     
     /*
     var direction = (new_icon_offset < icon_offset) ? -1 : 1;
