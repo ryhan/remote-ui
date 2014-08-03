@@ -37,7 +37,7 @@ $(function() {
       $('.popovers').toggleClass('active');
       popover_closed = !popover_closed;
       if (popover_closed == true){
-        //elementSpringTo("#caret", 150, 3550, [50, 10, 2]);
+        elementSpringTo("#caret", 150, 3550, [50, 10, 2]);
         $(".app_icons").css({"top": "0px"});
       }
     }
@@ -51,7 +51,7 @@ $(function() {
     $(this).removeClass('grow');
 
     var caretIndex =  (icon_index % 3);
-    //elementSpringTo("#caret", caretIndex*95 + 45, 150, [50, 10, 2]);
+    elementSpringTo("#caret", caretIndex*95 + 45, 150, [50, 10, 2]);
     $('.popovers').addClass('bounce');
 
     setTimeout(function(){
