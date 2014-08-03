@@ -169,7 +169,8 @@ body{
   box-shadow: 0 1px 0 #CCC;
 
   background-color: #3A5999;
-  background-color: #1372DB;
+  /*background-color: #1372DB;*/
+  background-color: white;
   /*background: -webkit-linear-gradient(top, #314C95, #3A5999);*/
   border: 1px solid #1C3870;
   box-shadow: 
@@ -180,9 +181,10 @@ body{
   padding: 22px 0;
 }
 .like.button.active{
-  box-shadow: inset 0 2px 3px rgba(0,0,0,0.8);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
   background-color: #2D3C63;
-  background: -webkit-linear-gradient(top, #2D3C63, #354775);
+  /*background: -webkit-linear-gradient(top, #2D3C63, #354775);*/
+  background-color: #D1D9EA;
 }
 
 
