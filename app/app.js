@@ -2,6 +2,7 @@
 
 
 var current_icon = 0;
+var popover_closed = true;
 
 $(function() {
 
@@ -28,14 +29,25 @@ $(function() {
 
     var icon_index = Number($(this).data("icon-id"));
 
-    if (icon_index == current_icon){
+    if (icon_index == current_icon || popover_closed==true){
       $('.popovers').toggleClass('active');
+      popover_closed = !popover_closed;
+      if (popover_closed == true){
+        elementSpringTo("#caret", 150, 3550, [50, 10, 2]);
+        $(".app_icons").css({"top": "0px"});
+      }
     }
+    if (popover_closed == false){
+      var app_row = (icon_index - (icon_index % 3))/3
+      $(".app_icons").css({"top": -120*app_row + "px"});
+    }
+    current_icon = icon_index;
 
     $(this).addClass('shrink');
     $(this).removeClass('grow');
 
-    elementSpringTo("#caret", icon_index*95 + 45, 150, [50, 10, 2]);
+    var caretIndex =  (icon_index % 3);
+    elementSpringTo("#caret", caretIndex*95 + 45, 150, [50, 10, 2]);
     $('.popovers').addClass('bounce');
 
     setTimeout(function(){

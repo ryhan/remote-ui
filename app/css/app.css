@@ -16,9 +16,51 @@ body{
   left: 2px;
   right: 2px;
   bottom: 2px;
+  -webkit-transition: all 0.4s ease-out;
+  -webkit-transform: translateY(550px) scale(0.2);
+  opacity: 0;
+  -webkit-animation: popoverOut 0.4s 1 ease-out;
+  
 }
+@-webkit-keyframes popoverOut{
+  0% { -webkit-transform: translateY(0px); opacity: 1;}
+  20% { -webkit-transform: translateY(-50px); opacity: 1;}
+  100% { -webkit-transform: translateY(350px) scale(0.2); opacity: 0;}
+}
+
+.popovers.active{
+  -webkit-transform: translateY(0px) scale(1);
+ 
+  opacity: 1;
+   -webkit-animation: popoverIn 0.4s 1 ease-out;
+  
+}
+@-webkit-keyframes popoverIn{
+  0% { -webkit-transform: translateY(350px) scale(0.2); opacity: 0;}
+  80% { -webkit-transform: translateY(-30px) scale(1); opacity: 1;}
+  100% { -webkit-transform: translateY(0px); opacity: 1;}
+
+}
+
+#caret{
+  opacity: 0;
+  -webkit-transition: all 0.6 ease-in;
+}
+.popovers.active + #caret{
+  opacity: 1;
+   -webkit-animation: flyCaret 0.6s 1 ease-out;
+  
+}
+@-webkit-keyframes flyCaret{
+  0%, 60% { -webkit-transform: translateY(1350px) scale(0.2); opacity: 0;}
+  70% { -webkit-transform: translateY(-10px) scale(1); opacity: 1;}
+  100% { -webkit-transform: translateY(0px); opacity: 1;}
+
+}
+
+
 .popovers.bounce{
-   -webkit-animation: popoverBounceIn 0.5s 1 ease-out;
+  /* -webkit-animation: popoverBounceIn 0.5s 1 ease-out;*/
 }
 @-webkit-keyframes popoverBounceIn{
   0%{ -webkit-transform: translateY(0)}
@@ -57,7 +99,12 @@ body{
   left: -webkit-calc(50% - 42px);
   left: 20px;
   width: 2000px;
-  height: 150px;
+  right: 20px;
+  width: 100%;
+  line-height: 80px;
+  /*height: 150px;*/
+  min-height: 150px;
+  height: 300px;
   padding: 50px 0;
 
   font-size: 0;
