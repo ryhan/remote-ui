@@ -38,12 +38,12 @@ $(function() {
       popover_closed = !popover_closed;
       if (popover_closed == true){
         elementSpringTo("#caret", 150, 3550, [50, 10, 2]);
-        $(".app_icons").css({"top": "0px"});
+        $(".app_icons").css({"-webkit-transform": "translateY(0px)"});
       }
     }
     if (popover_closed == false){
       var app_row = (icon_index - (icon_index % 3))/3
-      $(".app_icons").css({"top": -120*app_row + "px"});
+      $(".app_icons").css({"-webkit-transform": "translateY(" + -120*app_row + "px)"});
     }
     current_icon = icon_index;
 
