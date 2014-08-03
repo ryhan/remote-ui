@@ -1,0 +1,47 @@
+/* app.css */
+
+body{
+  background-color: #44494F;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.app_icons{
+  position: fixed;
+  top: 0;
+  left: -webkit-calc(50% - 42px);
+  width: 2000px;
+  height: 150px;
+  padding: 50px 0;
+
+}
+.app_icon{
+  width: 83px;
+  height: 83px;
+  display: inline-block;
+}
+
+.app_icon img{
+  width: 100%;
+  -webkit-transition: all 0.4s ease-out;
+   -webkit-transform: scale(1);
+}
+.app_icon.grow img{
+  -webkit-transform: scale(1.2);
+}
+.app_icon.shrink img{
+
+   -webkit-animation: shrinkBounce 0.4s 1 ease-out;
+
+}
+@-webkit-keyframes shrinkBounce{
+  0%{ -webkit-transform: scale(1.2);}
+  30% { -webkit-transform: scale(0.8);}
+  60% { -webkit-transform: scale(1.1);}
+
+  100% { -webkit-transform: scale(1);}
+}
