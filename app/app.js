@@ -8,6 +8,16 @@ $(function() {
   var $app_icon = $('.app_icon');
   var $app_icons = $('.app_icons');
 
+
+  $('.button').on("touchstart", function(){
+    $(this).addClass('active');
+    $(this).removeClass('finished');
+  });
+  $('.button').on("touchend", function(){
+    $(this).removeClass('active');
+    $(this).addClass('finished');
+  });
+
   $app_icon.on("touchstart", function(){
     $(this).addClass('grow');
     $(this).removeClass('shrink');
