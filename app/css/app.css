@@ -2,12 +2,22 @@
 
 body{
   background-color: #44494F;
+  /*background: -webkit-linear-gradient(top, #44494F, #1B1D20);*/
+
+  box-shadow: inset 0 -20px 50px 1B1D20;
+
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .popovers{
@@ -99,7 +109,7 @@ body{
 
   font-size: 0;
 
-  -webkit-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.1s ease-out;
 
 }
 .app_icon{
@@ -135,11 +145,17 @@ body{
    -webkit-animation: shrinkBounce 0.4s 1 ease-out;
 
 }
-@-webkit-keyframes shrinkBounce{
+/*@-webkit-keyframes shrinkBounce{
   0%{ -webkit-transform: scale(1.05) translateY(-5px);}
   25% { -webkit-transform: scale(1) translateY(5px);}
   50% { -webkit-transform: scale(1) translateY(-2px);;}
   75% { -webkit-transform: scale(1) translateY(2px);;}
+  100% { -webkit-transform: scale(1) translateY(0);}
+}*/
+@-webkit-keyframes shrinkBounce{
+  0%{ -webkit-transform: scale(1.05) translateY(-15px);}
+  30% { -webkit-transform: scale(1) translateY(10px);}
+  60% { -webkit-transform: scale(1) translateY(-5px);;}
   100% { -webkit-transform: scale(1) translateY(0);}
 }
 

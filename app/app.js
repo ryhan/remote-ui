@@ -37,7 +37,7 @@ $(function() {
       $('.popovers').toggleClass('active');
       popover_closed = !popover_closed;
       if (popover_closed == true){
-        elementSpringTo("#caret", 150, 3550, [50, 10, 2]);
+        elementSpringTo("#caret", 150, 1550, [50, 10, 2]);
         $(".app_icons").css({"-webkit-transform": "translateY(0px)"});
       }
     }
@@ -54,10 +54,10 @@ $(function() {
     elementSpringTo("#caret", caretIndex*95 + 45, 150, [50, 10, 2]);
     $('.popovers').addClass('bounce');
 
-    setTimeout(function(){
+    //setTimeout(function(){
       $('.controlset').removeClass('active');
       $('.controlset[data-icon-id="'+icon_index + '"]').addClass('active');
-    }, 200);  
+    //}, 200);  
     
 
   });
