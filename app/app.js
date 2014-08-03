@@ -22,7 +22,10 @@ $(function() {
 
     $(this).addClass('shrink');
     $(this).removeClass('grow');
+
+    elementSpringTo("#caret", icon_index*95 + 45, 150, [50, 10, 2]);
     
+    /*
     var direction = (new_icon_offset < icon_offset) ? -1 : 1;
 
     var bounce_icon_offset = direction*20 + new_icon_offset;
@@ -40,7 +43,7 @@ $(function() {
     moveToXAt(direction*-20 + icon_offset, 200);
      moveToXAt(icon_offset, 400);
 
-
+  */
     /*
     console.log(bounce_icon_offset);
     console.log(new_icon_offset);
